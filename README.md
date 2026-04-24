@@ -66,7 +66,7 @@ $ ros2 launch bt_ros2 bt_ros2.launch.py
 ```
 
 ## Reference link
-https://github.com/micro-ROS/micro-ROS-Agent/tree/humble
+https://github.com/GoldenSeaC/z1_nmpc_pkg.git
 
 https://github.com/Adlink-ROS/apriltag_docking
 
