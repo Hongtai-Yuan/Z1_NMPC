@@ -5,12 +5,6 @@ This repository allows people to use apriltag code for positioning and automatic
   <img src="readme_source/123.gif" alt="说明文本" width="600">
 </p>
 
-## Device requirement
-| 设备 | 描述               | 版本   | 依赖包     |
-|----------|--------------------|--------|------------|
-| REALSENSE DEPTH  CAMERA D435   | 深度相机    | D435   | realsense2_camera |
-| Esp32   | 底盘控制板    | ESP32-S3   | micro_ros_agent |
-
 ## Install dependencies
 ```bash
 $ cd ~/autodock_ros2_humble/
@@ -68,7 +62,5 @@ $ ros2 launch bt_ros2 bt_ros2.launch.py
 ## Reference link
 https://github.com/GoldenSeaC/z1_nmpc_pkg.git
 
-https://github.com/Adlink-ROS/apriltag_docking
-
-https://github.com/wjwwood/serial
+https://github.com/leggedrobotics/ocs2.git
 
