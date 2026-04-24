@@ -1,5 +1,5 @@
 # Z1_NMPC
-This repository allows people to use apriltag code for positioning and automatic adjustment of pose in ROS2 humble version, and it has been successfully tested in real cars, but there may be some cumbersome adjustment process, and parameters need to be adjusted to improve. In the project, we use the Behavior Tree to integrate our code, so that our project can first navigate, navigate to the target point, execute Apriltag code positioning, and then return to the second target point. But in this repository, i just show how to get Apriltag code and Follow.
+这个仓库主要做了宇树Z1机械臂的NMPC高频控制，基于下面的两个仓库做了一些修使其更加稳定，但由于宇树的硬件原因，还是会有一些抖动，可以参考视频看一下。
 
 <p align="center">
   <img src="readme_source/123.gif" alt="说明文本" width="600">
@@ -7,45 +7,11 @@ This repository allows people to use apriltag code for positioning and automatic
 
 ## Install dependencies
 ```bash
-$ cd ~/autodock_ros2_humble/
-$ rosdep update
-$ rosdep install --from-paths src --ignore-src -r -y --rosdistro humble
-$ git clone https://github.com/AprilRobotics/apriltag.git
-$ cd apriltag
-$ cmake -B build -DCMAKE_BUILD_TYPE=Release
-$ sudo cmake --build build --target install
+$ ocs2 sqp mpc implementation on unitree z1
+$ rosrun unitree_z1_mpc policy_to_real
+$ ./z1_ctrl
+$ roslaunch ocs2_mobile_manipulator_ros z1_real_arm.launch
 ```
-
-## Build BT_ros2 with main workspace:
-
-```bash
-$ git clone https://github.com/Y250HT/Behavior_Ros2.git
-$ sudo apt-get install ros-humble-realsense2*
-$ cd ~/autodock_ros2_humble/
-$ source /opt/ros/humble/setup.bash
-$ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
-```
-
-## Use Physical Bot and RealSense D435
-
-Step 1. Turn on MicroRos in your robot chRassis.
-
-```bash
-$ ros2 run micro_ros_agent micro_ros_agent udp4 --port 8888 -v6
-```
-
-Step 2. Launch RealSenseD435 in real world.
-
-```bash
-$ ros2 launch realsense2_camera rs_launch.py
-```
-
-Step 3. Send request to start docking
-
-```bash
-$ ros2 launch bt_ros2 bt_ros2.launch.py
-```
-
 
 ## Reference link
 https://github.com/GoldenSeaC/z1_nmpc_pkg.git
