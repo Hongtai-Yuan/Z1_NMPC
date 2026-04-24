@@ -7,7 +7,6 @@
 
 ## Install dependencies
 ```bash
-$ ocs2 sqp mpc implementation on unitree z1
 $ rosrun unitree_z1_mpc policy_to_real
 $ ./z1_ctrl
 $ roslaunch ocs2_mobile_manipulator_ros z1_real_arm.launch
