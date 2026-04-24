@@ -18,3 +18,5 @@ https://github.com/GoldenSeaC/z1_nmpc_pkg.git
 
 https://github.com/leggedrobotics/ocs2.git
 
+https://github.com/Hongtai-Yuan/UnitreeZ1_Calib.git
+
