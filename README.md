@@ -13,9 +13,8 @@ $ roslaunch ocs2_mobile_manipulator_ros z1_real_arm.launch
 ```
 
 ## Reference link
-https://github.com/GoldenSeaC/z1_nmpc_pkg.git
+https://my.feishu.cn/docx/RYb7dyPKposVYRxHQBOcsbi2ned
 
-https://github.com/leggedrobotics/ocs2.git
+https://github.com/Seeed-Projects/reBot-DevArm
 
-https://github.com/Hongtai-Yuan/UnitreeZ1_Calib.git
 
